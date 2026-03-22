@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 WEBHOOK_URL = "https://discord.com/api/webhooks/1485360254467313785/vmwhDZNp3PkWG1-BhEwHkdEl0XhNdbheLqDObUY9g54v-iOVLHUFDI54IJmFKVohUSyl"
-THRESHOLD = 100000
+THRESHOLD = 10000
 
 URL = "https://idleclanshub.vercel.app/market"
 
@@ -35,7 +35,7 @@ def check_market():
                 alerts.append(f"{item} → {total_val}")
 
     if alerts:
-        send_discord("🔥 TOTAL > 100000:\n" + "\n".join(alerts))
+        send_discord("🔥 TOTAL > 10000:\n" + "\n".join(alerts))
 
 if __name__ == "__main__":
     check_market()
